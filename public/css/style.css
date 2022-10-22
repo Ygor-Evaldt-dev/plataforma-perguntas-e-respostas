@@ -1,0 +1,66 @@
+/* GLOBAIS */
+body {
+  background-color: #f7f7f765;
+}
+li a {
+  color: #000000;
+  font-weight: 500;
+}
+li a:hover {
+  font-weight: 700;
+}
+li a:focus {
+  font-weight: 700;
+}
+footer {
+  background-color: #000000;
+}
+
+
+/* IDS */
+#logo {
+  max-width: 50px;
+}
+
+@media (max-width: 600px)
+{
+  #new-question{
+    margin-top: 10px;
+  }
+}
+#copyright:hover {
+  color: #26A47B !important;
+}
+#home {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  height: 100vh;
+}
+
+/* CLASSES */
+.form-control:focus {
+  border-color: #000000;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ativo {
+  font-weight: bold !important;
+  color: #26A47B !important;
+}
+.btn {
+  box-shadow: none;
+}
+.fixed-top {
+  position: inherit !important; 
+}
+.link {
+  color: #4F4F4F;
+}
+.link:hover {
+  color: #2a2c28 !important;
+}
+.actions {
+  font-size: 14px;
+}

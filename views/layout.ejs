@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/nodejs.ico" type="image/x-icon">
+
+  <!-- Bootstrap-->
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+
+
+  <title>Dev Questions & Responses</title>
+</head>
+
+<body>
+  <header class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/" title="Página inicial"><img src="/img/nodejs.ico" alt="" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse pe-2 justify-content-between" id="navbarNav">
+          <ul class="navbar-nav text-end">
+            <li class="nav-item">
+              <a id="start" class="nav-link" aria-current="page" href="/" title="Página inicial">Início</a>
+            </li>
+            <li class="nav-item">
+              <a id="questions" class="nav-link" href="/questions" title="Listagem de perguntas">Perguntas</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav text-end">
+            <li class="nav-item"><a class="nav-link fs-5" target="_blank" href="https://api.whatsapp.com/send/?phone=5551983313468&text&app_absent=0"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="nav-item"><a class="nav-link fs-5" target="_blank" href="https://www.linkedin.com/in/ygorevaldt/"><i class="fab fa-linkedin"></i></a></li>
+            <li class="nav-item"><a class="nav-link fs-5" target="_blank" href="https://github.com/Ygor-Evaldt-dev"><i class="fab fa-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <%- body %>
+</body>
+
+</html>

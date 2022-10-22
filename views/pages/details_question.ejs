@@ -1,0 +1,32 @@
+<main class="container my-5 py-5 card p-3">
+  <section>
+    <h1 class="h3 pb-2">
+      <%= question.title %>
+    </h1>
+    <p>
+      <%= question.description %>
+    </p>
+  </section>
+  <form class="mt-4" action="/answer" method="post">
+    <h2 class="fs-5">
+      Resposta
+    </h2>
+    <textarea class="w-100 p-3 form-control" name="response" id="response" rows="6" placeholder="Deixe sua resposta aqui" required></textarea>
+    <div class="d-flex justify-content-between">
+      <a class="actions mt-2" href="/questions"><i class="fas fa-reply-all"></i> Retornar</a>
+      <button class="btn btn-sm btn-success mt-2" type="submit">Responder</button>
+    </div>
+    <input type="hidden" name="question_id" id="question" value="<%= question.id %>">
+  </form>
+  <section class="mt-4">
+    <h2 class="fs-5 mb-3">
+      Respostas:
+    </h2>
+    <% responses.forEach(response=> { %>
+      <p>
+        <%= response.body %>
+      </p>
+      <hr class="mb-4">
+      <% }); %>
+  </section>
+</main>

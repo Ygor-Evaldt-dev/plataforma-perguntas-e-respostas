@@ -1,0 +1,23 @@
+<main class="container my-5">
+  <section class="d-sm-flex align-itens-center mb-4">
+    <h1 class="h3 m-0 pe-3 text-start">
+      Listagem de perguntas
+    </h1>
+    <a class="btn btn-sm btn-success py-2" id="new-question" href="/to_ask">Nova pergunta</a>
+  </section>
+
+  <dl class="card py-4 px-4">
+    <% questions.forEach(question=>{ %>
+      <dt>
+        <a class="link" href="/question/<%= question.id %>">
+          <%= question.title %>
+        </a>
+      </dt>
+      <dd class="text-end m-0">
+        <a class="actions" href="/question/<%= question.id %>"><i class="fas fa-reply-all"></i> Responder</a>
+        <!-- <a href="/delete/<%= question.id %>"><button class="btn btn-sm btn-danger">delete</button></a> -->
+      </dd>
+      <hr class="mt-1 p-0 mb-4">
+      <% }); %>
+  </dl>
+</main>
