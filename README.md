@@ -52,4 +52,4 @@
 
 ## Observações
 ### Porta do servidor local
-- Caso o seu ambiente local já esteja utilizando a porta '80' para algum outro serviço, acesse o arquivo 'index.js' na raiz do projeto e altere o valor da váriavel 'port' linha 6 para outra de sua preferência, execute o comando terminal 'index.js' e acesse o endereço http://localhost/'porta que você escolheu'
+- Caso o seu ambiente local já esteja utilizando a porta '80' para algum outro serviço, acesse o arquivo 'index.js' na raiz do projeto e altere o valor da váriavel 'port' linha 6 para outra de sua preferência, execute o comando terminal 'node index.js' e acesse o endereço http://localhost/'porta que você escolheu'
