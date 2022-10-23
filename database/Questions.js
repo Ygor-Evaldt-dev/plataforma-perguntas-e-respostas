@@ -1,6 +1,6 @@
 const { Model } = require('sequelize');
 const Sequelize = require('sequelize');
-const connection = require('../database/connection');
+const connection = require('./connection');
 
 const Questions = connection.define('questions', {
   title: {

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 // Models
-const Questions = require('../models/Questions');
-const Responses = require('../models/Responses');
+const Questions = require('../database/Questions');
+const Responses = require('../database/Responses');
 
 // get routers
 router.get('/', (req, res) => {
