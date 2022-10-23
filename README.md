@@ -26,3 +26,30 @@
 
 ### Faker.js
 - https://fakerjs.dev/guide/
+
+## Rodando o projeto localmente.
+
+### Passo 1
+- Instale o node.js no seu ambiente local: https://nodejs.org/en/
+
+### Passo 2
+- Instale o Mysql server no seu ambiente local: https://dev.mysql.com/downloads/
+
+### Passo 3
+- Com o Node.js e o Mysql instalado localmente, crie um clone deste repositório no seu computador com o comando terminal - 'git clone https://github.com/Ygor-Evaldt-dev/plataforma-perguntas-e-respostas.git'
+
+### Passo 4
+- Acesse o diretorio do projeto com o comando terminal 'cd plataforma-perguntas-e-respostas'
+
+### Passo 5
+- Remova o versionamento com o comando terminal 'rm -rf .git/'
+
+### Passo 6
+- Se certificando de estar dentro do diretório do projeto, escreva o comando terminal 'node index.js'
+
+### Passo 7
+- Abra o seu navegador e acesse o endereço 'http://localhost'
+
+## Observações
+### Porta do servidor local
+- Caso o seu ambiente local já esteja utilizando a porta '80' para algum outro serviço, acesse o arquivo 'index.js' na raiz do projeto e altere o valor da váriavel 'port' linha 6 para outra de sua preferência, execute o comando terminal 'index.js' e acesse o endereço http://localhost/'porta que você escolheu'
