@@ -45,9 +45,17 @@
 - Remova o versionamento com o comando terminal 'rm -rf .git/'
 
 ### Passo 6
-- Se certificando de estar dentro do diretório do projeto, escreva o comando terminal 'node index.js'
+- Abra o PowerShell terminal no seu computador e digite o comando mysql -h localhost -u root -p
+- digite a senha que você definiu para o seu usuario local
+- Já dentro do MySql digite o comando CREATE DATABASE 'nome do banco de dados'
 
 ### Passo 7
+- No diretorio 'database' no arquivo 'connection.js' preencha as informações de 'database' e 'password' definidar por você no passo anterior
+
+### Passo 8
+- Se certificando de estar dentro do diretório do projeto, escreva o comando terminal 'node index.js'
+
+### Passo 9
 - Abra o seu navegador e acesse o endereço 'http://localhost'
 
 ## Observações
