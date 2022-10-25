@@ -15,18 +15,20 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 // diretory static arquives
 app.use(express.static('public'));
-// routers
-const userRoute = require('./routers/userRouters');
+
+// controllers
+const UserController = require('./user/UserController');
+const QuestionsController = require('./questions/QuestionsController');
+const ResponsesController = require('./responses/ResponsesController');
+// Models
+const QuestionsModel = require('./questions/QuestionsModel');
+const ResponsesModel = require('./responses/ResponsesModel');
 
 // get routers
-app.use('/', userRoute);
-app.use('/questions', userRoute);
-app.use('/questions/:id', userRoute);
-app.use('/delete', userRoute);
-app.use('delete/:id', userRoute);
-// post routers
-app.use('/save_question', userRoute);
-app.use('/answer', userRoute);
+app.use('/', UserController);
+app.use('/', QuestionsController);
+app.use('/', ResponsesController);
+
 
 // server testing
 app.listen(port, () => {

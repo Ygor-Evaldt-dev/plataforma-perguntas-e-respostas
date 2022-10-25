@@ -1,6 +1,5 @@
-const { Model } = require('sequelize');
 const Sequelize = require('sequelize');
-const connection = require('./connection');
+const connection = require('../database/connection');
 
 const Questions = connection.define('questions', {
   title: {
@@ -12,7 +11,5 @@ const Questions = connection.define('questions', {
     allowNull: false
   }
 });
-
-Questions.sync({force: false}).then(() => {});
-
+// Questions.sync({force: true}).then(() => {});
 module.exports = Questions;

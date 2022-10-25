@@ -1,13 +1,7 @@
 const express = require('express');
 const router = express.Router();
-// Models
-const Questions = require('../database/Questions');
-const Responses = require('../database/Responses');
-
-// get routers
-router.get('/', (req, res) => {
-  res.render('pages/home.ejs');
-});
+const Questions = require('./QuestionsModel');
+const Responses = require('../responses/ResponsesModel');
 
 router.get('/questions', (req, res) => {
   Questions.findAll({ raw: true, order:[
@@ -39,21 +33,12 @@ router.get('/question/:id', (req, res) => {
       res.redirect('/questions');
     }
   })
-})
-
-router.get('/delete/:id', (req, res) => {
-  Questions.destroy({where: {'id': req.params.id}}).then(() => {
-    res.redirect('/questions');
-  }).catch(() => {
-    res.redirect('/error');
-  });
 });
 
 router.get('/to_ask', (req, res) => {
   res.render('pages/to_ask.ejs');
 });
 
-// post routes
 router.post('/save_question', (req, res) => {
   const question = {
     title: req.body.title,
@@ -65,25 +50,6 @@ router.post('/save_question', (req, res) => {
   }).then(() => {
     res.redirect('/questions');
   });
-});
-
-router.post('/answer', (req, res) => {
-  const response = {
-    body: req.body.response,
-    question_id: req.body.question_id
-  };
-  Responses.create({
-    body: response.body,
-    question_id: response.question_id
-  }).then(() => {
-    res.redirect(`/question/${response.question_id}`);
-  });
-});
-
-router.get('*', (req, res) => {
-  if(res.status(404)) {
-    res.render('pages/error.ejs');
-  }
 });
 
 module.exports = router;

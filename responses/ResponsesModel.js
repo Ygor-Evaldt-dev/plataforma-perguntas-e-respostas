@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const connection = require('./connection');
+const connection = require('../database/connection');
 
 const Responses = connection.define('Responses', {
   body: {
@@ -11,6 +11,5 @@ const Responses = connection.define('Responses', {
     allowNull: false
   }
 });
-
-Responses.sync({force: false});
+// Responses.sync({force: true});
 module.exports = Responses;
