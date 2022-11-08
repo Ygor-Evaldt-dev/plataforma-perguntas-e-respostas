@@ -3,10 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser'); 
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
-const port = 80;
+const port = 3000;
 
 // configurations database
 const connection = require('./database/connection');
+const router = require('./routers');
 
 // configurations
 app.set('view engine', 'ejs');
@@ -16,21 +17,10 @@ app.use(bodyParser.json());
 // diretory static arquives
 app.use(express.static('public'));
 
-// controllers
-const UserController = require('./user/UserController');
-const QuestionsController = require('./questions/QuestionsController');
-const ResponsesController = require('./responses/ResponsesController');
-// Models
-const QuestionsModel = require('./questions/QuestionsModel');
-const ResponsesModel = require('./responses/ResponsesModel');
-
-// get routers
-app.use('/', UserController);
-app.use('/', QuestionsController);
-app.use('/', ResponsesController);
-
+// routers
+app.use('/', router);
 
 // server testing
 app.listen(port, () => {
-  console.log("Servidor rodando no endereço http://localhost");
+  console.log(`Servidor rodando no endereço http://localhost:${port}`);
 });

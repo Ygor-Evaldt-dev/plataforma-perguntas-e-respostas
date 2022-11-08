@@ -1,9 +1,9 @@
 // importar sequelize
 const Sequelize = require('sequelize');
 
-const database = '';
+const database = 'db_perguntas_e_respostas';
 const user = 'root';
-const password = '';
+const password = 'codeislife';
 const hostAndSgbd = {
   host: 'localhost',
   dialect: 'mysql'
